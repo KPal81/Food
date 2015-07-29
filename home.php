@@ -31,7 +31,7 @@
 Ingredients<br>
 <input type="text" name="input">
 <input type="submit" value="ADD">
-<a href="api.php">GO-></a>
+<a href="list.php">GO-></a>
 </div>
 
 </form>
