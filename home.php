@@ -26,7 +26,7 @@
 }
 </style>
 
-<form align="center" action="input.php" method="POST" >
+<form align="center" action="home.php" method="POST" >
 <div id="sty">
 Ingredients<br>
 <input type="text" name="input">
