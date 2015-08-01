@@ -1,5 +1,25 @@
+<html>
+
+<body style="background-color:rgb(16, 161, 50)">
+<style>
+a {
+    color: #FFFFFF;
+    font-family: Franklin Gothic Medium Cond, sans-serif;
+    text-decoration: none;
+    font-size: 100%;
+}
+#g {
+	text-align: center;
+}
+</style>
+</body>
+
+<div id="g">
 <?php
-	$myfile = fopen("ing.txt", "r+") or die("Unable to open file!");
+	$temp=fopen("temp.txt","r+");
+	$user=fgets($temp);
+	fclose($temp);
+	$myfile = fopen($user.".txt", "r+") or die("Unable to open file!");
 	$iurl="";
 	$nurl="";
 	$furl="";
@@ -24,8 +44,13 @@
 	for ($z=0; $z<$tot; $z++){
 		$u=$js["results"][$z]["name"];
 		$id=$js["results"][$z]["url"];
+		$pic=$js["results"][$z]["image"];
 		echo '<a href="direct.php?recipe='.$id.'">'.$u.'</a>'."<br />";	
 	}
 	fclose($myfile);
-	unlink("ing.txt")
+	unlink($user.".txt");
+	$myfile = fopen("temp.txt", "w+");
+	fclose($myfile);	
 ?>
+</div>
+</html>

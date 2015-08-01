@@ -1,3 +1,19 @@
+<html>
+<body style="background-color:rgb(16, 161, 50)">
+<style>
+	#b {
+    	color: #FFFFFF;
+    	font-family: Franklin Gothic Medium Cond, sans-serif;
+    	font-size: 120%;
+    	text-align: center;
+
+
+	}
+</style>
+</body>
+
+</html>
+<div id=b>
 <?php
 	$recipe=$_GET["recipe"];
 	$yo = file_get_contents($recipe);
@@ -31,4 +47,5 @@
 		echo $q."<br />";
 	}
 	echo "<br />"; 
-?>
+?>	
+</div>
